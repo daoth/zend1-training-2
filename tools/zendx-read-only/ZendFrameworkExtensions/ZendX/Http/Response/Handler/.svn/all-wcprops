@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/5/trunk/ZendFrameworkExtensions/ZendX/Http/Response/Handler
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/5/trunk/ZendFrameworkExtensions/ZendX/Http/Response/Handler/Interface.php
+END
+Xml.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/5/trunk/ZendFrameworkExtensions/ZendX/Http/Response/Handler/Xml.php
+END
+Soap.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/5/trunk/ZendFrameworkExtensions/ZendX/Http/Response/Handler/Soap.php
+END
+Json.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/5/trunk/ZendFrameworkExtensions/ZendX/Http/Response/Handler/Json.php
+END

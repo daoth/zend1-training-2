@@ -1,0 +1,27 @@
+<div id="welcome">
+
+        <?php echo $this->ajaxLink("Show me something",
+                        "/hello/world",
+                        array('update' => '#content'));?>
+
+    <div id="content"></div>
+
+    <form method="post" action="/hello/world">
+    Pick your Date: <?php echo $this->datePicker("dp1",
+                                                 '',
+                                                 array(
+                                                    'defaultDate' =>
+                                                        date('Y/m/d', time())));?>
+    <input type="submit" value="Submit" />
+    </form>
+
+    <?php
+
+    print __FILE__."<br>";
+
+    foreach($this->data as $row){
+        print $row['name']."<br>";
+    }
+
+    ?>
+</div>
