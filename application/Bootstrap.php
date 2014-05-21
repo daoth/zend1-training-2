@@ -11,6 +11,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $this->bootstrap('frontController');
         $this->_frontController = $this->getResource('frontController');
         $this->_frontController->throwExceptions(true);
+//        print_r($this->_frontController);
+//        $this->_frontController->setControllerDirectory("ctrl");
+//        print_r($this->_frontController);
+        //$con = $this->_frontController->getControllerDirectory();
+        //print_r($con);
+        //exit();
         $moduleLoader = new Zend_Application_Module_Autoloader(array('namespace' => '', 'basePath' => APPLICATION_PATH));
 
 

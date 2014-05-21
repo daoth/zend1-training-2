@@ -1,0 +1,6 @@
+<form action="<?php print $this->url(array("module"=>"admin", "controller"=>"usergroup", "action"=>"store"));?>" method="post">
+    <input name="data[groupname]" type="text" value="<?php print @$this->data->username;?>" /><br>
+    <textarea name="data[description]" ><?php print @$this->data->password;?></textarea><br>
+    <input type="hidden" name="data[id]" value="<?php print @$this->data->id;?>" />
+    <input type="submit" value="Submit" />
+</form>
