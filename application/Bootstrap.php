@@ -5,18 +5,26 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
     protected $_frontController;
 
-    protected function _initAutoload()
-    {
-        // Ensure front controller instance is present
+    protected function _initSetupModularDirectoryStructure(){
         $this->bootstrap('frontController');
         $this->_frontController = $this->getResource('frontController');
         $this->_frontController->throwExceptions(true);
-//        print_r($this->_frontController);
-//        $this->_frontController->setControllerDirectory("ctrl");
-//        print_r($this->_frontController);
-        //$con = $this->_frontController->getControllerDirectory();
-        //print_r($con);
-        //exit();
+
+        $path = BASE_PATH . DS . 'configs' . DS . 'application.ini';
+        $conf = new Zend_Config_Ini($path, 'production');
+
+        $moduleControllerDirectoryName = $conf->resources->frontController->moduleControllerDirectoryName;
+        $controllerDirectory = $this->_frontController->getControllerDirectory();
+        foreach($controllerDirectory as $k=>$v){
+            $newPath = str_replace('controllers', $moduleControllerDirectoryName, $v);
+            $this->_frontController->addControllerDirectory($newPath, $k);
+        }
+    }
+    protected function _initAutoload()
+    {
+        // Ensure front controller instance is present
+        $controllerDirectory = $this->_frontController->getControllerDirectory();
+
         $moduleLoader = new Zend_Application_Module_Autoloader(array('namespace' => '', 'basePath' => APPLICATION_PATH));
 
 

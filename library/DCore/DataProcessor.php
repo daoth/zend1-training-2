@@ -40,16 +40,12 @@
 
 class DCore_DataProcessor{
 
-    public function test(){
-        print "ok";
-    }
-
     static function getOneKeyDataInArrayList($array, $childKey){
         $newArray = array();
         array_walk($array, function($item, $key) use(&$newArray, $childKey){
             $newArray[$key] = $item[$childKey];
         });
-        return $array;
+        return $newArray;
     }
     static function getKeyDataByKeyDataInArrayList($array, $keyGet, $keyCheck, $keyCheckValue){
         $newArray = array();
