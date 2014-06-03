@@ -17,6 +17,7 @@
       <modelsDirectory>
         <dbTableDirectory>
           <dbTableFile dbTableName="Guestbook"/>
+          <dbTableFile dbTableName="Test"/>
         </dbTableDirectory>
         <modelFile modelName="GuestbookMapper"/>
       </modelsDirectory>
